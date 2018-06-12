@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="control_bar_padding">8dp</dimen>
+    <dimen name="screen_border_width">24dp</dimen>
+    <dimen name="progressBar_margin">24dp</dimen>
+    <dimen name="list_item_padding">8dp</dimen>
+</resources>

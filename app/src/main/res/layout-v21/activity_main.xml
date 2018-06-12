@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".Activity_Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimaryDark"
+        android:elevation="4dp"
+        android:layout_alignParentTop="true"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Quasi Musica"/>
+
+    <!-- Portrait Image -->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/portrait_image_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_toolbar">
+
+        <ImageView
+            android:id="@+id/album_art"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:srcCompat="@drawable/ic_music_note"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/image_contains_album_artwork" />
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/seekBar"
+        android:layout_below="@id/portrait_image_holder">
+
+        <TextView
+            android:id="@+id/album_text"
+            style="@style/AppNowPlayingStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/artist_text"
+            android:layout_centerHorizontal="true"
+            android:text="@string/udacitys_greatest_hits" />
+
+        <TextView
+            android:id="@+id/artist_text"
+            style="@style/AppNowPlayingStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/song_title_text"
+            android:layout_centerInParent="true"
+            android:text="Kelsey"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/song_title_text"
+            style="@style/AppNowPlayingStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/lets_talk_code" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/player_control_layout"
+        android:max="99"
+        android:progress="0" />
+
+    <RelativeLayout
+        android:id="@+id/player_control_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorDisabled"
+        android:padding="@dimen/control_bar_padding">
+
+            <ImageView
+                android:id="@+id/button_previous"
+                style="@style/controlButtonStyle"
+                app:srcCompat="@drawable/ic_previous"
+                android:layout_toStartOf="@id/button_play"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/button_play"
+                style="@style/controlButtonStyle"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/ic_play"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/button_next"
+                style="@style/controlButtonStyle"
+                app:srcCompat="@drawable/ic_next"
+                android:layout_toEndOf="@id/button_play"
+                tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

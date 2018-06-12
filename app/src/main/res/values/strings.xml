@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Music Player Example</string>
+    <string name="image_contains_album_artwork">Album Artwork</string>
+    <string name="udacitys_greatest_hits">Udacity\'s Greatest Hits</string>
+    <string name="lets_talk_code">Let\'s Talk \'Code\'</string>
+    <string name="musical_note_image_description">musical note image</string>
+    <string name="checkbox_image_description">checkbox image</string>
+    <string name="add_more_songs">Add More Songs</string>
+    <string name="remove_selected_songs">Remove Selected Songs</string>
+    <string name="sort_by">Sort by</string>
+    <string name="artist">Artist</string>
+    <string name="album">Album</string>
+    <string name="genre">Genre</string>
+    <string name="title">Title</string>
+    <string name="edit_playlist">Edit Playlist</string>
+    <string name="shuffle">Shuffle</string>
+</resources>
