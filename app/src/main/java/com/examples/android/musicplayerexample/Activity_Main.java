@@ -116,7 +116,7 @@ public class Activity_Main extends AppCompatActivity {
                 imageViewNowPlayingAlbumArt.setVisibility(View.VISIBLE);
             }
 
-            imageViewNowPlayingAlbumArt.setImageResource(R.drawable.udacity_u);
+            imageViewNowPlayingAlbumArt.setImageResource(R.drawable.ic_music_note);
             textViewNowPlayingArtist.setText(songsPlaylist.get(playlistPosition).getArtist());
             textViewNowPlayingSongTitle.setText(songsPlaylist.get(playlistPosition).getTitle());
             textViewNowPlayingAlbum.setText(songsPlaylist.get(playlistPosition).getAlbum());
